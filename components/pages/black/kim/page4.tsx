@@ -42,7 +42,7 @@ export default function Page({
         ):(
           <CheckCheck className="size-5" />
         )}
-        <span>Activate full access and withdraw my balance</span>
+        <span className="text-xs sm:text-base">Activate full access and withdraw my balance</span>
       </Button>
       <ConfettiEffect />
     </>

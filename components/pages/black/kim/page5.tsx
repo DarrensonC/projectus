@@ -5,13 +5,6 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { useLayer } from '@/context/layer-provider';
 import { useEffect, useState } from 'react';
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'vturb-smartplayer': any;
-    }
-  }
-}
 import { CheckCheck, Loader2 } from 'lucide-react';
 
 export default function Page({
@@ -113,7 +106,7 @@ export default function Page({
               ):(
                 <CheckCheck className="size-5" />
               )}
-              <span>I WANT TO PAY THE FEE!</span>
+              <span className="text-xs sm:text-base">I WANT TO PAY THE FEE!</span>
             </Button>
           </a>
         )}

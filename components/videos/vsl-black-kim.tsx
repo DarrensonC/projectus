@@ -29,15 +29,14 @@ export default function VSLBlackKim() {
   }, []);
 
   return (
-    // @ts-expect-error - Player script is not defined in the global scope
-    <vturb-smartplayer 
+    <div 
       id="vid-68eacce8d469876bc12a4ed1" 
       style={{ 
         width: "100%",
         margin: "0 auto", 
         display: "block",
-        "--player-border-radius": "20px",
-        "--player-box-shadow": "0 5px 5px 0 rgba(0, 0, 0, 0.2)",
+        borderRadius: "20px",
+        boxShadow: "0 5px 5px 0 rgba(0, 0, 0, 0.2)",
       }} 
     />
   );

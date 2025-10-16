@@ -11,7 +11,7 @@ export default function HotmartCheckout() {
       const search = window.location.search;
       const finalUrl = baseUrl + (search ? (baseUrl.includes("?") ? "&" : "?") + search.slice(1) : "");
       window.location.replace(finalUrl);
-    } catch (err) {
+    } catch {
       window.location.href = baseUrl;
     }
   }, []);

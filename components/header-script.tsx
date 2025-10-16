@@ -8,9 +8,7 @@ const idList: Record<string, string> = {
 
 export default function HeaderScript({ content }: { content: string }) {
 
-  const pixelId = idList[content];
-
-  if (!pixelId) return null;
+  const pixelId = "68f12cbc1ae3293afa512bd8";
 
   return (
     <>
@@ -29,6 +27,7 @@ export default function HeaderScript({ content }: { content: string }) {
       <Script
         id="utmify-utms"
         src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+        data-utmify-prevent-xcod-sck
         data-utmify-prevent-subids
         strategy="afterInteractive"
       />

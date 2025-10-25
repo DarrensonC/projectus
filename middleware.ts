@@ -8,6 +8,14 @@ const paramList: Record<string, string> = {
   'bw5epB1IhzbROy3': 'megan',
 };
 
+// DOMAIN MAPPING - Mapeamento de domínios para variações
+const domainMapping: Record<string, string> = {
+  'usetaskora.com': 'kim',
+  'www.usetaskora.com': 'kim',
+  'taskaro.site': 'rock',
+  'www.taskaro.site': 'rock',
+};
+
 export function middleware(req: NextRequest) {
 
   const { nextUrl } = req;
@@ -26,6 +34,25 @@ export function middleware(req: NextRequest) {
 
   if (localParam === localTestParamEnv) {
     requestHeaders.set('x-local-param', 'true');
+  };
+
+  // VERIFICAR SE O DOMÍNIO ESTÁ MAPEADO
+  if (domainMapping[host]) {
+    const response = NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
+    
+    response.cookies.set({
+      name: 'xcat_valid',
+      value: domainMapping[host],
+      path: '/',
+      maxAge: 60 * 60 * 72,
+      httpOnly: false,
+    });
+  
+    return response;
   };
 
   if (catParam && paramList[catParam]) {

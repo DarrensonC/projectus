@@ -48,14 +48,14 @@ export default function Page({
       <Button
         onClick={handleClick}
         disabled={active}
-        className="pulse !py-3 sm:!py-4 !text-sm sm:!text-base !bg-green-500 !border-green-600 hover:!bg-green-600 !leading-tight"
+        className="pulse !py-3 sm:!py-4 !text-xs sm:!text-base !bg-green-500 !border-green-600 hover:!bg-green-600 !leading-tight"
       >
         {active ? (
-          <Loader2 className="size-5 sm:size-6 animate-spin" />
+          <Loader2 className="size-4 sm:size-6 animate-spin" />
         ):(
-          <CheckCheck className="size-5 sm:size-6" />
+          <CheckCheck className="size-4 sm:size-6" />
         )}
-        <span className="leading-snug">Activate full access and withdraw my balance</span>
+        <span className="leading-tight whitespace-nowrap">Activate full access and withdraw my balance</span>
       </Button>
       
     </div>

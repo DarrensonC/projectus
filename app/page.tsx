@@ -82,19 +82,41 @@ export default function Page() {
 
   // PLAY SOUND
   const handlePlaySound = () => {
-    const audio = new Audio('/songs/caching.mp3');
-    audio.play();
+    try {
+      const audio = new Audio('/songs/caching.mp3');
+      audio.volume = 0.7; // Volume a 70%
+      const playPromise = audio.play();
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log('✅ Som tocado com sucesso!');
+          })
+          .catch((error) => {
+            console.error('❌ Erro ao tocar som:', error);
+            // Tenta tocar novamente após interação do usuário
+            document.addEventListener('click', () => {
+              audio.play().catch(e => console.error('Retry failed:', e));
+            }, { once: true });
+          });
+      }
+    } catch (error) {
+      console.error('❌ Erro ao criar áudio:', error);
+    }
   };
 
   // HANDLE CLICK
   const handleClick = () => {
+    console.log('🔵 Clique na página:', page, '| É Info Page?', isInfoPage);
     setActive(true);
     if (isInfoPage) {
+      console.log('⛔ Página de info - SEM som');
       setTimeout(() => {
         setPage(page + 1);
         setActive(false);
       }, 750);
     } else {
+      console.log('🔊 Página de avaliação - COM som + modal');
       setTimeout(() => {
         setOpenModal(true);
         handlePlaySound();

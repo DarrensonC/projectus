@@ -26,7 +26,7 @@ export default function Page({
   const userFrontLink = userLayerData.frontLink;
 
   // SET CONTENT DATA
-  const videoId = "68eeaaebfb7a093479472fe5";
+  const videoId = "69012c201ffb5b3068e53125";
   const backLink = userHost.includes('localhost') ? `http://${userHost}/promo` : `https://${userHost}/promo`;
   const pitchTime = 641;
 
@@ -72,9 +72,9 @@ export default function Page({
     <>
       <Head>
         <script>{`!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);`}</script>
-        <link rel="preload" href="https://scripts.converteai.net/655331ad-f855-4d28-8b01-a97e04c93f76/players/68eeaaebfb7a093479472fe5/v4/player.js" as="script" />
+        <link rel="preload" href="https://scripts.converteai.net/655331ad-f855-4d28-8b01-a97e04c93f76/players/69012c201ffb5b3068e53125/v4/player.js" as="script" />
         <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script" />
-        <link rel="preload" href="https://cdn.converteai.net/655331ad-f855-4d28-8b01-a97e04c93f76/68eeaa7b7d5171f2e5793697/main.m3u8" as="fetch" />
+        <link rel="preload" href="https://cdn.converteai.net/655331ad-f855-4d28-8b01-a97e04c93f76/69012ac9a43343dbf8a4ebf1/main.m3u8" as="fetch" />
         <link rel="dns-prefetch" href="https://cdn.converteai.net" />
         <link rel="dns-prefetch" href="https://scripts.converteai.net" />
         <link rel="dns-prefetch" href="https://images.converteai.net" />
@@ -82,7 +82,7 @@ export default function Page({
       </Head>
       <Script
         id="vturb-player"
-        src="https://scripts.converteai.net/655331ad-f855-4d28-8b01-a97e04c93f76/players/68eeaaebfb7a093479472fe5/v4/player.js"
+        src="https://scripts.converteai.net/655331ad-f855-4d28-8b01-a97e04c93f76/players/69012c201ffb5b3068e53125/v4/player.js"
         strategy="afterInteractive"
       />
       <div className="flex flex-col text-center text-sm rounded-3xl gap-5 bg-gradient-to-t appear border-t px-4 py-6 from-gray-50 to-gray-200/50 border-gray-300">

@@ -17,23 +17,29 @@ export default function Page({
         
         {/* Título */}
         <div className="text-3xl sm:text-4xl font-black mb-4 text-gray-900">
-          Congratulations!
+          🎁 Congratulations! 🎁
+        </div>
+        
+        {/* Subtítulo */}
+        <div className="text-base font-semibold text-gray-800 mb-4">
+          You&apos;ve been pre-selected to join the program!
         </div>
         
         {/* Box Verde com Check */}
         <div className="bg-green-50 border-2 border-dashed border-green-500 rounded-2xl p-5 mb-5">
-          <div className="flex items-center justify-center gap-2 text-green-700 font-bold text-base sm:text-lg mb-2">
-            <span className="text-2xl">✅</span>
-            <span>YOU&apos;RE NOW ELIGIBLE TO EARN</span>
+          <div className="text-sm text-green-700 leading-relaxed">
+            To unlock your full access and withdraw your earnings, just follow the step-by-step instructions below.
           </div>
-          <div className="text-sm text-green-600">
-            Your verification step is complete. But to unlock your full access and withdraw your earnings, just follow the last step below.
-          </div>
+        </div>
+        
+        {/* Texto de Importância */}
+        <div className="text-sm text-gray-700 font-medium mb-4">
+          Your honest opinion is essential to complete this stage.
         </div>
         
         {/* Instrução */}
         <div className="text-sm text-gray-700 font-medium">
-          Click the button below and see the immediate withdrawal guide! 👇
+          Click the button below and finish the activation in just a few seconds! 👇
         </div>
         
       </div>

@@ -77,7 +77,7 @@ export default function Page() {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   // SET PAGE CONTENT
-  const PageContent = Routes[content][page];
+  const PageContent = Routes[content || 'kim']?.[page];
   const isInfoPage = page === 0 || page === 4 || page === 5;
 
   // PLAY SOUND

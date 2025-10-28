@@ -28,7 +28,7 @@ export default function Page({
   // SET CONTENT DATA
   const videoId = "69012c201ffb5b3068e53125";
   const backLink = userHost.includes('localhost') ? `http://${userHost}/promo` : `https://${userHost}/promo`;
-  const pitchTime = 641;
+  const pitchTime = 633;
 
   // VIDEO VERIFY
   useEffect(() => {

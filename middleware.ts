@@ -31,6 +31,7 @@ export function middleware(req: NextRequest) {
   requestHeaders.set('x-host', host);
   requestHeaders.set('x-params', params.toString());
   requestHeaders.set('x-cat-param', catParam);
+  requestHeaders.set('x-pathname', nextUrl.pathname);
 
   if (localParam === localTestParamEnv) {
     requestHeaders.set('x-local-param', 'true');

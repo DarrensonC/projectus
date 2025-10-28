@@ -36,9 +36,14 @@ export default async function Layout({
   const catParam = cks.get('xcat_valid');
   const content = catParam?.value || '';
   const params = hdrs.get('x-params') || '';
+  const pathname = hdrs.get('x-pathname') || '';
   
-  // GET USER LAYER
-  const userLayer = await getUserLayer({ cks, hdrs });
+  // ROTAS QUE DEVEM IGNORAR O SISTEMA DE LAYERS
+  const bypassLayerRoutes = ['/ready', '/almost', '/thanks', '/promo'];
+  const shouldBypassLayer = bypassLayerRoutes.some(route => pathname.startsWith(route));
+  
+  // GET USER LAYER (somente se não for rota de bypass)
+  const userLayer = shouldBypassLayer ? null : await getUserLayer({ cks, hdrs });
 
   // BODY CLASS
   const bodyClassName = `flex flex-col min-w-[350px] items-center select-none ${redHatDisplay.variable} antialiased`;
@@ -51,12 +56,10 @@ export default async function Layout({
         </head>
       )}
       <body className={bodyClassName} suppressHydrationWarning>
-        {userLayer === 1 ?
-          <WhiteContent />
-        : (
+        {shouldBypassLayer || userLayer !== 1 ? (
           <LayerProvider
             host={host}
-            layer={userLayer}
+            layer={userLayer || 3}
             params={params}
             content={content}
             frontLink={frontLink}
@@ -64,6 +67,8 @@ export default async function Layout({
           >
             {children}
           </LayerProvider>
+        ) : (
+          <WhiteContent />
         )}
       </body>
     </html>

@@ -4,28 +4,28 @@ import { Wallet } from "lucide-react";
 // SET COMPONENT DATA
 const balance: Record<string, Record<number, { start: number, end: number }>> = {
   "kim": {
-    1: { start: 0, end: 0 },
-    2: { start: 0, end: 60 },
-    3: { start: 60, end: 120 },
-    4: { start: 120, end: 180 },
+    0: { start: 0, end: 0 },
+    1: { start: 0, end: 60 },
+    2: { start: 60, end: 120 },
+    3: { start: 120, end: 180 },
+    4: { start: 180, end: 180 },
     5: { start: 180, end: 180 },
-    6: { start: 180, end: 180 },
   },
   "rock": {
-    1: { start: 0, end: 0 },
-    2: { start: 0, end: 71 },
-    3: { start: 71, end: 142 },
-    4: { start: 142, end: 213 },
+    0: { start: 0, end: 0 },
+    1: { start: 0, end: 71 },
+    2: { start: 71, end: 142 },
+    3: { start: 142, end: 213 },
+    4: { start: 213, end: 213 },
     5: { start: 213, end: 213 },
-    6: { start: 213, end: 213 },
   },
   "megan": {
-    1: { start: 0, end: 0 },
-    2: { start: 0, end: 60 },
-    3: { start: 60, end: 120 },
-    4: { start: 120, end: 180 },
+    0: { start: 0, end: 0 },
+    1: { start: 0, end: 60 },
+    2: { start: 60, end: 120 },
+    3: { start: 120, end: 180 },
+    4: { start: 180, end: 180 },
     5: { start: 180, end: 180 },
-    6: { start: 180, end: 180 },
   },
 };
 

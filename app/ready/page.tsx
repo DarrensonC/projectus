@@ -40,7 +40,7 @@ export default function Page() {
 
           {/* Descrição */}
           <div className="text-base text-gray-300 font-medium leading-relaxed">
-            Unlock permanent access to our powerful AI system built to generate unlimited results for life! 💸
+            Never pay the annual fee again! Get permanent access to YouTube Rewards and withdraw unlimited earnings forever! 💸
           </div>
 
           {/* Checkout Hotmart (Botão verde gigante) */}
@@ -53,7 +53,7 @@ export default function Page() {
             href="/thanks" 
             className="text-xs text-gray-500 hover:text-gray-400 underline mt-2"
           >
-            No thanks, I&apos;ll skip this offer
+            No thanks, I&apos;ll pay the fee every year
           </Link>
 
         </div>

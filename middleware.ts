@@ -12,8 +12,8 @@ const paramList: Record<string, string> = {
 const domainMapping: Record<string, string> = {
   'usetaskora.com': 'kim',
   'www.usetaskora.com': 'kim',
-  'taskaro.site': 'rock',
-  'www.taskaro.site': 'rock',
+  'taskaro.site': 'kim',
+  'www.taskaro.site': 'kim',
 };
 
 export function middleware(req: NextRequest) {

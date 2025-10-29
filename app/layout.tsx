@@ -46,10 +46,10 @@ export default async function Layout({
   const userLayer = shouldBypassLayer ? null : await getUserLayer({ cks, hdrs });
 
   // BODY CLASS
-  const bodyClassName = `flex flex-col min-w-[350px] items-center select-none ${redHatDisplay.variable} antialiased`;
+  const bodyClassName = `flex flex-col w-full max-w-full overflow-x-hidden items-center select-none ${redHatDisplay.variable} antialiased`;
     
   return (
-    <html lang="es">
+    <html lang="es" className="overflow-x-hidden">
       {isProduction && (
         <head>
           <HeaderScript content={content} />

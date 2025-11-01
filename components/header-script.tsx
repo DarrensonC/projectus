@@ -6,9 +6,18 @@ const idList: Record<string, string> = {
   shakira: "68d2918cf1f6ffb0ac84056b",
 };
 
-export default function HeaderScript({ content }: { content: string }) {
+// Mapeamento de domínios para Pixel IDs
+const domainPixelMap: Record<string, string> = {
+  'usetaskora.com': '68f12cbc1ae3293afa512bd8',
+  'www.usetaskora.com': '68f12cbc1ae3293afa512bd8',
+  'taskaro.site': '68fd735bf27b9bf33fe96a7d',
+  'www.taskaro.site': '68fd735bf27b9bf33fe96a7d',
+};
 
-  const pixelId = "68f12cbc1ae3293afa512bd8";
+export default function HeaderScript({ content, host }: { content: string; host: string }) {
+
+  // Seleciona pixel baseado no domínio ou usa o padrão
+  const pixelId = domainPixelMap[host] || "68f12cbc1ae3293afa512bd8";
 
   return (
     <>

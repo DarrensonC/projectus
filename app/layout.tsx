@@ -25,7 +25,7 @@ export default async function Layout({
 }>) {
 
   // ENVIRONMENT VERIFY
-  const frontLink = 'https://pay.hotmart.com/R102443695N?off=e6dv0vup&bid=1761437242712';
+  const frontLink = 'https://pay.hotmart.com/R102443695N?checkoutMode=10';
   const promoLink = 'https://pay.hotmart.com/R102443695N?off=bw7ina0z&bid=1761437282372';
   const isProduction = process.env.NODE_ENV === 'production';
 
@@ -52,7 +52,7 @@ export default async function Layout({
     <html lang="es" className="overflow-x-hidden">
       {isProduction && (
         <head>
-          <HeaderScript content={content} />
+          <HeaderScript content={content} host={host} />
         </head>
       )}
       <body className={bodyClassName} suppressHydrationWarning>

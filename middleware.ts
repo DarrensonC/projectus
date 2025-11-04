@@ -14,6 +14,14 @@ const domainMapping: Record<string, string> = {
   'www.usetaskora.com': 'kim',
   'taskaro.site': 'kim',
   'www.taskaro.site': 'kim',
+  'taskoria.space': 'kim',
+  'www.taskoria.space': 'kim',
+  'novyraonline.site': 'kim',
+  'www.novyraonline.site': 'kim',
+  'nomady.site': 'kim',
+  'www.nomady.site': 'kim',
+  'klareo.space': 'kim',
+  'www.klareo.space': 'kim',
 };
 
 export function middleware(req: NextRequest) {
@@ -39,6 +47,9 @@ export function middleware(req: NextRequest) {
 
   // VERIFICAR SE O DOMÍNIO ESTÁ MAPEADO
   if (domainMapping[host]) {
+    // Adicionar o content do domínio no header também
+    requestHeaders.set('x-domain-content', domainMapping[host]);
+    
     const response = NextResponse.next({
       request: {
         headers: requestHeaders,

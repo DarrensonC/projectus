@@ -15,7 +15,7 @@ export default function Modal({
 }) {
 
   // SET COMPONENT DATA
-  const valueData = value[content];
+  const valueData = value[content] || value['kim'];
 
   return (
     <div className="flex justify-center items-center fixed inset-0 z-10 backdrop-blur-sm bg-black/40">

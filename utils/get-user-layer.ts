@@ -31,7 +31,9 @@ export async function getUserLayer({
   const paramsRaw = hdrs.get('x-params') || '';
 
   // GET PARAMS DATA
-  const catParam = cks.get('xcat_valid');
+  const catParamCookie = cks.get('xcat_valid');
+  const catParamHeader = hdrs.get('x-domain-content');
+  const catParam = catParamCookie || { value: catParamHeader };
   const localTestParamEnv = process.env.LOCAL_TEST_PARAM || 'dev';
   let localParam = hdrs.get('x-local-param') === 'true';
 

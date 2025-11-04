@@ -33,8 +33,9 @@ export default async function Layout({
   const cks = await cookies();
   const hdrs = await headers();
   const host = hdrs.get('x-host') || '';
-  const catParam = cks.get('xcat_valid');
-  const content = catParam?.value || '';
+  const catParamCookie = cks.get('xcat_valid');
+  const catParamHeader = hdrs.get('x-domain-content');
+  const content = catParamCookie?.value || catParamHeader || '';
   const params = hdrs.get('x-params') || '';
   const pathname = hdrs.get('x-pathname') || '';
   
@@ -50,12 +51,10 @@ export default async function Layout({
     
   return (
     <html lang="es" className="overflow-x-hidden">
-      {isProduction && (
-        <head>
-          <HeaderScript content={content} host={host} />
-        </head>
-      )}
       <body className={bodyClassName} suppressHydrationWarning>
+        {isProduction && (
+          <HeaderScript content={content} host={host} />
+        )}
         {shouldBypassLayer || userLayer !== 1 ? (
           <LayerProvider
             host={host}

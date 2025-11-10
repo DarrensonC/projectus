@@ -20,10 +20,21 @@ const domainPixelMap: Record<string, string> = {
   'www.taskoria.space': '6909903bd158e633b498e950',
 };
 
+// (Opcional) Mapeamento de Meta Pixel para o Helper detectar
+const domainMetaPixelMap: Record<string, string> = {
+  'taskaro.site': '871887588831959',
+  'www.taskaro.site': '871887588831959',
+  'taskoria.space': '871887588831959',
+  'www.taskoria.space': '871887588831959',
+  'klareo.space': '871887588831959',
+  'www.klareo.space': '871887588831959',
+};
+
 export default function HeaderScript({ content, host }: { content: string; host: string }) {
 
   // Seleciona pixel baseado no domínio ou usa o padrão
   const pixelId = domainPixelMap[host] || "68fd735bf27b9bf33fe96a7d";
+  const metaPixelId = domainMetaPixelMap[host];
 
   return (
     <>
@@ -51,6 +62,26 @@ export default function HeaderScript({ content, host }: { content: string; host:
           `,
         }}
       />
+      {metaPixelId && (
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '${metaPixelId}');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+      )}
       <Script
         id="utmify-utms"
         src="https://cdn.utmify.com.br/scripts/utms/latest.js"

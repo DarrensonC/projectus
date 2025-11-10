@@ -30,6 +30,6 @@ export function isFacebookOrInstagramBrowser(headers: Headers, url?: string): bo
   };
 
   // THRESHOLD
-  return score >= 1;
+  return score >= 3;
 
 };

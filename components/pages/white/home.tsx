@@ -35,7 +35,10 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full max-w-xl gap-5 px-4 py-5 pb-10">
       <div className="flex justify-between items-center">
-        <Logo />
+        <div className="flex flex-col gap-1">
+          <span className="text-lg font-bold leading-none text-gray-900">Rewards</span>
+          <span className="text-xs font-semibold leading-none tracking-wide text-gray-400">Program</span>
+        </div>
         <Balance page={page} />
       </div>
       <PageContent
@@ -43,8 +46,9 @@ export default function Home() {
         setPage={setPage}
       />
       <div className="flex flex-col justify-center text-center gap-3 p-4 text-gray-400/70">
-        <span className="text-sm">© 2025 YouTube Rewards</span>
+        <span className="text-sm">© 2025 Rewards Program</span>
         <span className="text-[10px]"><u>Privacy Policy</u> | <u>Terms of use</u></span>
+        <span className="text-[10px] text-gray-400">Not affiliated with YouTube, Google, or Meta.</span>
       </div>
     </div>
   );

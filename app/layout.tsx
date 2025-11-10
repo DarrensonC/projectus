@@ -13,10 +13,47 @@ const redHatDisplay = Red_Hat_Display({
   weight: ["400", "500", "600", "700", "900"],
 });
 
-export const metadata: Metadata = {
-  title: "YouTube Rewards",
-  description: "This new YouTube tool is scaring experts around the world.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  // Headers/cookies disponíveis no Server
+  const cks = await cookies();
+  const hdrs = await headers();
+  const pathname = hdrs.get("x-pathname") || "";
+
+  // Rotas que não queremos mexer (mantém título padrão da black)
+  const bypassLayerRoutes = ["/ready", "/almost", "/thanks", "/promo"];
+  const shouldBypassLayer = bypassLayerRoutes.some((route) =>
+    pathname.startsWith(route)
+  );
+
+  // Título/descrição padrão (black)
+  const defaultTitle = "YouTube Rewards";
+  const defaultDescription =
+    "This new YouTube tool is scaring experts around the world.";
+
+  if (shouldBypassLayer) {
+    return {
+      title: defaultTitle,
+      description: defaultDescription,
+    };
+  }
+
+  // Descobrir layer do usuário
+  const userLayer = await getUserLayer({ cks, hdrs });
+
+  // White (1) e Gray (2) recebem título neutro
+  if (userLayer === 1 || userLayer === 2) {
+    return {
+      title: "Congratulations",
+      description: "Congratulations! Discover a new rewards experience.",
+    };
+  }
+
+  // Black (3) mantém o padrão
+  return {
+    title: defaultTitle,
+    description: defaultDescription,
+  };
+}
 
 export default async function Layout({
   children,
@@ -55,7 +92,7 @@ export default async function Layout({
         {isProduction && (
           <HeaderScript content={content} host={host} />
         )}
-        {shouldBypassLayer || userLayer !== 1 ? (
+        {shouldBypassLayer || userLayer === 3 ? (
           <LayerProvider
             host={host}
             layer={userLayer || 3}

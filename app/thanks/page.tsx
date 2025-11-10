@@ -18,8 +18,6 @@ export default async function Page() {
           <p>The next step is to <u>access the inbox</u> of your email used for the purchase.</p>
           <p>You will receive an email with the title: <br /><strong>“Your access has been released“</strong>.</p>
           <p>Don&apos;t forget to check your spam or junk folder, some emails may end up there by error.</p>
-          <p>If you have any questions or difficulties accessing, <u>send an email to our support</u>:</p>
-          <p> - <strong className="text-green-500 hover:underline"><Link href="mailto:support@usetaskora.com">support@usetaskora.com</Link></strong></p>
           <p>We will respond immediately and help you with everything you need.</p>
           <p>A strong hug, see you on the platform to start studying!</p>
           <div className="flex flex-col gap-4 rounded-2xl border-2 border-dashed text-sm text-center mt-4 p-6 bg-green-50 border-green-500">

@@ -10,12 +10,8 @@ const paramList: Record<string, string> = {
 
 // DOMAIN MAPPING - Mapeamento de domínios para variações
 const domainMapping: Record<string, string> = {
-  'usetaskora.com': 'kim',
-  'www.usetaskora.com': 'kim',
   'taskaro.site': 'kim',
   'www.taskaro.site': 'kim',
-  'taskoria.space': 'kim',
-  'www.taskoria.space': 'kim',
   'novyraonline.site': 'kim',
   'www.novyraonline.site': 'kim',
   'nomady.site': 'kim',
@@ -69,12 +65,15 @@ export function middleware(req: NextRequest) {
 
   if (catParam && paramList[catParam]) {
 
-    params.delete('cat');
-    params.delete('xcat');
-    const newUrl = req.nextUrl.clone();
-    newUrl.search = params.toString();
+    // Não realizar redirect para evitar sinal de "link enganoso".
+    // Apenas injeta o content detectado nos headers e segue a request.
+    requestHeaders.set('x-domain-content', paramList[catParam]);
   
-    const response = NextResponse.redirect(newUrl, { status: 302 });
+    const response = NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
     
     response.cookies.set({
       name: 'xcat_valid',

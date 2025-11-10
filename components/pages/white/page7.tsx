@@ -30,14 +30,14 @@ export default function Page7() {
           🚨 ¡ATTENTION! Watch the video until the end to understand how to withdraw your available balance. ⬇️
         </span>
         {visible && (
-          <div className="flex flex-none max-w-max justify-center items-center text-sm font-bold rounded-lg border-2 animate-pulse gap-1.5 mx-auto px-2.5 py-2 z-50 text-red-800 border-red-200 bg-red-100">
+          <div className="flex flex-none max-w-max justify-center items-center text-sm font-bold rounded-lg border-2 animate-pulse gap-1.5 mx-auto px-2.5 py-2 z-50 text-blue-800 border-blue-200 bg-blue-100">
             <CircleAlert size={20} className="flex-none" />
             <div>
-              <span>ONLY</span>
-              <span className="rounded px-2 py-0.5 mx-1.5 text-white bg-red-500">
+              <span>VIEWERS</span>
+              <span className="rounded px-2 py-0.5 mx-1.5 text-white bg-blue-500">
                 <CountUp start={100} end={3} duration={150000} />
               </span>
-              <span>PLACES!</span>
+              <span>ONLINE</span>
             </div>
           </div>
         )}
@@ -54,14 +54,11 @@ export default function Page7() {
       <div className="bg-white rounded-xl border">
         <div className="flex items-center justify-between text-gray-600 text-sm border-b p-4">
           <div className="inline-flex items-center justify-center gap-1.5">
-            <svg aria-hidden="true" className="w-5 h-5 fill-current text-[#3A559F]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-              <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
-            </svg>
             <span className="hidden sm:inline">
-              Social Facebook Plugin
+              User testimonials
             </span>
             <span className="inline sm:hidden">
-              Facebook
+              Testimonials
             </span>
           </div>
 
@@ -95,13 +92,13 @@ export default function Page7() {
             avatar="/comments/person-3.webp"
             name="Carlos Dal Belo"
             time="Hace 15 min"
-            content="Llevo usando esta nueva herramienta de YouTube por 3 meses y desde entonces no he dejado de recibir transferencias todos los días, solo por ayudar a YouTube a analizar los anuncios que coloca en sus sitios web asociados. Estoy ganando unos 200 dólares al día como mínimo."
+            content="Llevo usando esta nueva herramienta por 3 meses y desde entonces no he dejado de recibir transferencias todos los días. Estoy ganando unos 200 dólares al día como mínimo."
           />
           <Comment
             avatar="/comments/person-4.webp"
             name="Bernardo Torres"
             time="Hace 18 min"
-            content="Estoy ganando tanto dinero con YouTube que voy a poder comprar mi motito nueva, pruébenlo gente porque realmente funciona..."
+            content="Estoy ganando tanto dinero con esto que voy a poder comprar mi motito nueva, pruébenlo gente porque realmente funciona..."
           />
           <Comment
             avatar="/comments/person-5.webp"
@@ -121,7 +118,7 @@ export default function Page7() {
             avatar="/comments/person-7.webp"
             name="Hanna Larissa"
             time="Hace 1h"
-            content="¡Hola a todos! Súper recomiendo esta nueva herramienta de YouTube, es perfecta. El dinero cae en la cuenta al instante, ¡Dioooos mío, Maravillooosooo! Gracias, YouTube 🤑💰"
+            content="¡Hola a todos! Súper recomiendo esta nueva herramienta, es perfecta. El dinero cae en la cuenta al instante, ¡Dioooos mío, Maravillooosooo!"
           />
         </div>
       </div>

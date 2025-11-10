@@ -18,6 +18,8 @@ const domainMapping: Record<string, string> = {
   'www.nomady.site': 'kim',
   'klareo.space': 'kim',
   'www.klareo.space': 'kim',
+  'taskoria.space': 'kim',
+  'www.taskoria.space': 'kim',
 };
 
 export function middleware(req: NextRequest) {

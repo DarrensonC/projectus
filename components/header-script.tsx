@@ -16,6 +16,8 @@ const domainPixelMap: Record<string, string> = {
   'www.nomady.site': '6909903bd158e633b498e950',
   'klareo.space': '690915d8e38098617d123af5',
   'www.klareo.space': '690915d8e38098617d123af5',
+  'taskoria.space': '6909903bd158e633b498e950',
+  'www.taskoria.space': '6909903bd158e633b498e950',
 };
 
 export default function HeaderScript({ content, host }: { content: string; host: string }) {

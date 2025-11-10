@@ -81,7 +81,7 @@ export async function getUserLayer({
   };
 
   // PARAMS FILTER
-  if (!catParam) {
+  if (!catParam?.value) {
     console.log('WHITE CONTENT: PARAMS');
     return 1;
   };

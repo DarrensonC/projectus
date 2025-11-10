@@ -35,9 +35,21 @@ export default function HeaderScript({ content, host }: { content: string; host:
         }}
       />
       <Script
-        id="utmify-pixel"
-        src="https://cdn.utmify.com.br/scripts/pixel/pixel.js"
+        id="utmify-pixel-loader"
         strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(){
+              try {
+                var a = document.createElement("script");
+                a.setAttribute("async", "");
+                a.setAttribute("defer", "");
+                a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+                document.head.appendChild(a);
+              } catch(e) {}
+            })();
+          `,
+        }}
       />
       <Script
         id="utmify-utms"

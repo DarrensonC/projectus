@@ -8,8 +8,8 @@ const idList: Record<string, string> = {
 
 // Mapeamento de domínios para Pixel IDs
 const domainPixelMap: Record<string, string> = {
-  'taskaro.site': '68fd735bf27b9bf33fe96a7d',
-  'www.taskaro.site': '68fd735bf27b9bf33fe96a7d',
+  'taskaro.site': '6911517bbffe2ad06d21b48e',
+  'www.taskaro.site': '6911517bbffe2ad06d21b48e',
   'novyraonline.site': '690915d8e38098617d123af5',
   'www.novyraonline.site': '690915d8e38098617d123af5',
   'nomady.site': '6909903bd158e633b498e950',

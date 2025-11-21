@@ -8,16 +8,12 @@ const idList: Record<string, string> = {
 
 // Mapeamento de domínios para Pixel IDs
 const domainPixelMap: Record<string, string> = {
-  'taskaro.site': '6911517bbffe2ad06d21b48e',
-  'www.taskaro.site': '6911517bbffe2ad06d21b48e',
-  'novyraonline.site': '690915d8e38098617d123af5',
-  'www.novyraonline.site': '690915d8e38098617d123af5',
-  'nomady.site': '6909903bd158e633b498e950',
-  'www.nomady.site': '6909903bd158e633b498e950',
-  'klareo.space': '690915d8e38098617d123af5',
-  'www.klareo.space': '690915d8e38098617d123af5',
-  'taskoria.space': '6909903bd158e633b498e950',
-  'www.taskoria.space': '6909903bd158e633b498e950',
+  'tubevity.online': '69208c9d1d9755682618d35d',
+  'www.tubevity.online': '69208c9d1d9755682618d35d',
+  'yuvox.online': '69208b54a4f3234d09b3f7ab',
+  'www.yuvox.online': '69208b54a4f3234d09b3f7ab',
+  'taskflowr.online': '6920b560aab29d45bc124b8f',
+  'www.taskflowr.online': '6920b560aab29d45bc124b8f',
 };
 
 // (Opcional) Mapeamento de Meta Pixel para o Helper detectar

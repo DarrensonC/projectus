@@ -10,16 +10,12 @@ const paramList: Record<string, string> = {
 
 // DOMAIN MAPPING - Mapeamento de domínios para variações
 const domainMapping: Record<string, string> = {
-  'taskaro.site': 'kim',
-  'www.taskaro.site': 'kim',
-  'novyraonline.site': 'kim',
-  'www.novyraonline.site': 'kim',
-  'nomady.site': 'kim',
-  'www.nomady.site': 'kim',
-  'klareo.space': 'kim',
-  'www.klareo.space': 'kim',
-  'taskoria.space': 'kim',
-  'www.taskoria.space': 'kim',
+  'tubevity.online': 'kim',
+  'www.tubevity.online': 'kim',
+  'yuvox.online': 'kim',
+  'www.yuvox.online': 'kim',
+  'taskflowr.online': 'kim',
+  'www.taskflowr.online': 'kim',
 };
 
 export function middleware(req: NextRequest) {

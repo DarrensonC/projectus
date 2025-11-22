@@ -62,8 +62,8 @@ export default async function Layout({
 }>) {
 
   // ENVIRONMENT VERIFY
-  const frontLink = 'https://pay.hotmart.com/R102443695N?checkoutMode=10';
-  const promoLink = 'https://pay.hotmart.com/R102443695N?off=bw7ina0z&bid=1761437282372';
+  const frontLink = 'https://pay.hotmart.com/A103016372G?off=arnsxp2f';
+  const promoLink = 'https://pay.hotmart.com/A103016372G?off=vsd974cy&checkoutMode=10&bid=1763595037909';
   const isProduction = process.env.NODE_ENV === 'production';
 
   // GET DOMAIN ID

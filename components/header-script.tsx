@@ -11,8 +11,9 @@ const domainPixelMap: Record<string, string> = {
   'tubevity.online': '69208c9d1d9755682618d35d',
   'www.tubevity.online': '69208c9d1d9755682618d35d',
   // IMPORTANTE: usar exatamente o mesmo ID do pixel cadastrado na UTMify
-  'yuvox.online': '69208b54a4f3234d09b37ab',
-  'www.yuvox.online': '69208b54a4f3234d09b37ab',
+  // (mesmo valor do window.pixelId do snippet da UTMify)
+  'yuvox.online': '69208b54a4f3234d09b3f7ab',
+  'www.yuvox.online': '69208b54a4f3234d09b3f7ab',
   'taskflowr.online': '6920b560aab29d45bc124b8f',
   'www.taskflowr.online': '6920b560aab29d45bc124b8f',
 };

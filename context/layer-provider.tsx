@@ -39,7 +39,9 @@ export function LayerProvider({
     return url + (url.includes('?') ? '&' : '?') + qs;
   };
 
+  // Garante que TANTO o front quanto o upsell/promo recebam as mesmas UTM params
   const frontLinkWithParams = buildUrlWithParams(frontLink, params);
+  const promoLinkWithParams = buildUrlWithParams(promoLink, params);
 
   const contextValue = {
     host,
@@ -47,7 +49,7 @@ export function LayerProvider({
     params,
     content,
     frontLink: frontLinkWithParams,
-    promoLink,
+    promoLink: promoLinkWithParams,
   };
 
   return (

@@ -53,7 +53,7 @@ export default function Page() {
             <div className="text-sm">
               <span className="leading-none">From <strong className="line-through">US$ 27,00</strong> for</span>
             </div>
-            <span className="text-green-500 text-4xl font-bold leading-none">US$ 17,00</span>
+            <span className="text-green-500 text-4xl font-bold leading-none">US$ 37,00</span>
           </div>
           <div>
             <a href={userPromoLink} className="w-full">

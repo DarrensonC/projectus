@@ -14,6 +14,8 @@ const domainPixelMap: Record<string, string> = {
   // (mesmo valor do window.pixelId do snippet da UTMify)
   'yuvox.online': '69208b54a4f3234d09b3f7ab',
   'www.yuvox.online': '69208b54a4f3234d09b3f7ab',
+  'viduple.com': '69208b54a4f3234d09b3f7ab',
+  'www.viduple.com': '69208b54a4f3234d09b3f7ab',
   'taskflowr.online': '6920b560aab29d45bc124b8f',
   'www.taskflowr.online': '6920b560aab29d45bc124b8f',
 };

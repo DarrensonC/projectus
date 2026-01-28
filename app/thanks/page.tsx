@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Logo from "@/components/logo";
 
 export default async function Page() {
@@ -14,8 +15,10 @@ export default async function Page() {
         <div className="flex flex-col text-base rounded-2xl gap-5 bg-gradient-to-t appear px-4 py-6 from-gray-50 to-gray-100">
           <span className="text-2xl font-semibold text-center">🎁 Welcome! 🎁</span>
 
-          <p><strong>Your access is being delivered by email.</strong></p>
-          <p>The next step is to check the inbox of the email used for the purchase (also check Spam/Junk).</p>
+          <p><strong>Your access has been successfully unlocked!</strong></p>
+          <p>
+            The next step is to check the inbox of the email used for the purchase (also check Spam/Junk).
+          </p>
 
           <p>
             You will receive an email with the title:<br /><strong>“Your access has arrived! 🥰”</strong>.
@@ -24,6 +27,16 @@ export default async function Page() {
           <div className="rounded-2xl border-2 border-dashed text-sm mt-2 p-5 bg-yellow-50 border-yellow-400">
             <p><strong>Important:</strong> this email contains a secure magic link (valid for 24 hours).</p>
             <p>After your first access, go to <strong>My Account</strong> to create your password.</p>
+          </div>
+
+          <div className="flex flex-col gap-4 rounded-2xl border-2 border-dashed text-sm text-center mt-2 p-6 bg-green-50 border-green-500">
+            <p><strong>Optional:</strong> if you already have a password or have accessed before, you can try logging in now.</p>
+            <Link
+              href="https://rewards-hub.memberkit.com.br/"
+              className="bg-green-200 text-green-900 text-sm text-center font-extrabold rounded-lg mt-2 p-3 hover:underline"
+            >
+              ✅ Click here to access the members area now!
+            </Link>
           </div>
 
           <div className="rounded-2xl border-2 border-dashed text-sm mt-2 p-5 bg-green-50 border-green-500">

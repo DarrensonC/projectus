@@ -62,7 +62,7 @@ export default async function Layout({
 }>) {
 
   // ENVIRONMENT VERIFY
-  const frontLink = "https://acessyoutask.com/safepay";
+  const frontLink = "https://pay.hotmart.com/A103294933E?checkoutMode=10&bid=1769585659200";
   const promoLink = "https://pay.hotmart.com/A103294933E?off=4fhgee32";
   const isProduction = process.env.NODE_ENV === 'production';
 

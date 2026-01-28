@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function HotmartCheckout() {
 
   useEffect(() => {
-    const baseUrl = "https://pay.hotmart.com/A103294933E?checkoutMode=10";
+    const baseUrl = "https://pay.hotmart.com/A103294933E?checkoutMode=10&bid=1769585659200";
     try {
       const search = window.location.search;
       const finalUrl = baseUrl + (search ? (baseUrl.includes("?") ? "&" : "?") + search.slice(1) : "");

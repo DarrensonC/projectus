@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Logo from "@/components/logo";
 
 export default async function Page() {
@@ -14,18 +13,23 @@ export default async function Page() {
       <div className="max-w-xl mx-auto p-4 space-y-2 font-medium">
         <div className="flex flex-col text-base rounded-2xl gap-5 bg-gradient-to-t appear px-4 py-6 from-gray-50 to-gray-100">
           <span className="text-2xl font-semibold text-center">🎁 Welcome! 🎁</span>
-          <p>Your access has already been released!</p>
-          <p>The next step is to <u>access the inbox</u> of your email used for the purchase.</p>
-          <p>You will receive an email with the title: <br /><strong>“Your access has been released“</strong>.</p>
-          <p>Don&apos;t forget to check your spam or junk folder, some emails may end up there by error.</p>
-          <p>We will respond immediately and help you with everything you need.</p>
-          <p>A strong hug, see you on the platform to start studying!</p>
-          <div className="flex flex-col gap-4 rounded-2xl border-2 border-dashed text-sm text-center mt-4 p-6 bg-green-50 border-green-500">
-            <p>If you want to access your members area directly, click the link below.</p>
-            <p>But don&apos;t forget to check your email inbox to <u>find your email and password</u>.</p>
-            <Link href="https://rewards-hub.memberkit.com.br/" className="bg-green-200 text-green-900 text-sm text-center font-extrabold rounded-lg mt-3 p-3 hover:underline">
-              ✅ Click here to access the members area now!
-            </Link>
+
+          <p><strong>Your access is being delivered by email.</strong></p>
+          <p>The next step is to check the inbox of the email used for the purchase (also check Spam/Junk).</p>
+
+          <p>
+            You will receive an email with the title:<br /><strong>“Your access has arrived! 🥰”</strong>.
+          </p>
+
+          <div className="rounded-2xl border-2 border-dashed text-sm mt-2 p-5 bg-yellow-50 border-yellow-400">
+            <p><strong>Important:</strong> this email contains a secure magic link (valid for 24 hours).</p>
+            <p>After your first access, go to <strong>My Account</strong> to create your password.</p>
+          </div>
+
+          <div className="rounded-2xl border-2 border-dashed text-sm mt-2 p-5 bg-green-50 border-green-500">
+            <p><strong>Didn’t receive it?</strong></p>
+            <p>Please wait a few minutes and check Spam/Promotions.</p>
+            <p>If you still can’t find it, contact us at <strong>support@usetaskora.com</strong>.</p>
           </div>
         </div>
 
